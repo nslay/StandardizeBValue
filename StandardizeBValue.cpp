@@ -64,7 +64,7 @@
 #include "gdcmCSAElement.h"
  
 void Usage(const char *p_cArg0) {
-  std::cerr << p_cArg0 << " [-hr] path|filePattern [path2|filePattern2 ...]" << std::endl;
+  std::cerr << "Usage: " << p_cArg0 << " [-hr] path|filePattern [path2|filePattern2 ...]" << std::endl;
   std::cerr << "\nOptions:" << std::endl;
   std::cerr << "-h -- This help message." << std::endl;
   std::cerr << "-r -- Recursively search folders." << std::endl;
