@@ -332,7 +332,7 @@ std::string ComputeDiffusionBValueGE(const itk::MetaDataDictionary &clDicomTags)
     return std::string();
 
   // Something is screwed up here ... let's try to remove the largest significant digit
-  if (dValue > 3000.0) {
+  if (dValue > 4000.0) {
     p = strValue.find_first_not_of(" \t0");
 
     strValue.erase(strValue.begin(), strValue.begin()+p+1);
@@ -340,7 +340,7 @@ std::string ComputeDiffusionBValueGE(const itk::MetaDataDictionary &clDicomTags)
     valueStream.clear();
     valueStream.str(strValue);
 
-    if (!(valueStream >> dValue) || dValue < 0.0 || dValue > 3000.0)
+    if (!(valueStream >> dValue) || dValue < 0.0 || dValue > 4000.0)
       return std::string();
   }
 
